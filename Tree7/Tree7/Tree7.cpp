@@ -97,16 +97,6 @@ void PrintSort(Node* p)
     if (p->right) PrintSort(p->right);
 }
 
-void GetTranslate(Node* p, string key)
-{
-    if (p->left) GetTranslate(p->left, key);
-    {
-        if (p->key == key)
-            cout << p->key << " - " << p->translation << "\n";
-    }
-    if (p->right) GetTranslate(p->right, key);
-}
-
 Node* GetAdresNode(Node* root, string key)
 {
     if (root->key == key) return root;
@@ -293,7 +283,9 @@ int main()
             {
                 cout << "Введите слово на английском: \n";
                 cin >> key;
-                GetTranslate(root, key);
+                Node* adresTransl = GetAdresNode(root, key);
+                if (adresTransl) cout << key << " - " << adresTransl->translation << endl;
+                else cout << "слово не найдено\n";
             }
             else cout << "словарь пуст\n";
             cout << "\n";
