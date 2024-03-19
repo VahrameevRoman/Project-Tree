@@ -1,0 +1,10 @@
+apple-€блоко
+age-возраст
+name-им€
+she-она
+brain-мозг
+nose-нос
+umbrella-зонт
+dark-темный
+happy-счастливый
+ring-кольцо
