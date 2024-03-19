@@ -197,6 +197,7 @@ void DeleteNode(Node* root, Node* p)
         else if (parentQ->right == q) parentQ->right = nullptr;
         delete q;
     }
+    Balance(parentQ);
     cout << "Удаление прошло успешно\n";
 }
 
@@ -307,7 +308,6 @@ int main()
                 cout << "Введите слово на английском: \n";
                 cin >> key;
                 StartDelete(root, key);
-                if (root != nullptr) Balance(root);
             }
             else cout << "словарь пуст\n";
             cout << "\n";
